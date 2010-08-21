@@ -1,0 +1,173 @@
+@import "wysiwyg.css";
+
+#overlay {
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 100%;
+	z-index: 9999;
+	color: #FFFFFF;
+}
+
+#editable-regions {
+	display: none;
+}
+
+#editable-regions div {
+	position: absolute;
+	background-color: rgba(237,184,0,0.3);
+	border: 2px solid rgba(0,0,0,0.3);
+	cursor: pointer;
+	/* border radius */
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#editable-regions div:hover {
+	background-color: rgba(237,184,0,0.4);
+}
+
+#modal {
+	position: fixed;
+	display: none;
+	width: 37%;
+	background-color: #2a2a2a;
+	border: 3px solid #111;
+	/* box shadow */
+	box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+	/* border radius */
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#loader {
+	position: fixed;
+	top: -30px;
+	height: 25px;
+	width: 80px;
+	color: #fff;
+	padding: 5px 0 0 40px;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	background: rgba(0,0,0,1) url("http://localhost/cms/admin/img/ajax-loader.gif") no-repeat 15px 10px;
+}
+
+a:focus {
+	outline:0;
+}
+
+form.editor {
+	padding: 10px 15px;
+	color: #222;
+}
+
+form.editor, form.editor h1, form.editor div {
+	position: relative;
+}
+
+#modal h1 {
+	background-color: #1c1c1c;
+	border-bottom: 1px solid #3a3a3a;
+	margin: 0;
+	font-family: georgia, serif;
+	font-size: 24px;
+	font-weight: normal;
+	color: #eee;
+	letter-spacing: -0.1;
+	text-shadow: 1px 1px 1px #000;
+	padding: 10px 15px;
+}
+
+.editor hr {
+	border: 0;
+	border-bottom: 1px dashed #aaa;
+	margin: 5px 0 8px;
+}
+
+.editor .controls {
+	margin: 5px 0 5px 4px;
+}
+
+.editor .controls a {
+	margin-left: -4px;
+	padding: 1px 3px 2px;
+	border: 1px solid transparent;
+	text-decoration: none;
+}
+
+.editor .controls a:hover {
+	border: 1px solid #bbb;
+}
+
+.editor .controls .icon {
+	vertical-align: -3px;
+	border: 0;
+}
+
+.editor .editor textarea,
+.editor .editor iframe {
+	width: 100%;
+	height: 150px;
+	border: none;
+	background-color: #ccc;
+	padding: 3px 5px;
+	/* box-sizing */
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.editor .buttons {
+	margin-top: 5px;
+}
+
+.editor .buttons button {
+	font: 16px Arial, sans-serif;
+	padding: 4px 8px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	background-color: #222;
+	color: #666;
+	text-shadow: 1px 1px 0px #000;
+	border: 2px solid #1a1a1a;
+	cursor: pointer;
+}
+
+.editor .buttons button:hover {
+	color: #aaa;
+	background-color: #1a1a1a;
+	border: 2px solid #111;
+}
+
+#modal .close {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	color: #aaa;
+	text-shadow: 1px 1px 0px #000;
+	margin: 3px;
+}
+
+#modal img.close {
+	margin-right: 10px;
+}
+
+#modal a.close {
+	position: static;
+}
+
+#modal .or {
+	color: #555;
+	font: italic 12px Georgia, serif;
+	text-shadow: 1px 1px 0 #111;
+}
